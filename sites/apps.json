@@ -1,0 +1,41 @@
+{
+    "frappe": {
+        "resolution": {
+            "commit_hash": null,
+            "branch": null
+        },
+        "required": [],
+        "idx": 1,
+        "version": "15.88.0"
+    },
+    "helpdesk": {
+        "is_repo": true,
+        "resolution": {
+            "commit_hash": "bfd01b0549940dcfb5e9db1f4dbf527205d5fe7f",
+            "branch": "master"
+        },
+        "required": [],
+        "idx": 2,
+        "version": "1.17.3"
+    },
+    "telephony": {
+        "is_repo": true,
+        "resolution": {
+            "commit_hash": "00ca23964ac5847464ce9e03f8f9b32543dff006",
+            "branch": "develop"
+        },
+        "required": [],
+        "idx": 3,
+        "version": "0.0.1"
+    },
+    "bench_manager": {
+        "is_repo": true,
+        "resolution": {
+            "commit_hash": "cc4a1fd589af9d3f44d437ef16e6926b1be31280",
+            "branch": "develop"
+        },
+        "required": [],
+        "idx": 4,
+        "version": "0.0.1"
+    }
+}

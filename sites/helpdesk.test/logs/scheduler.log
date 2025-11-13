@@ -1,0 +1,44 @@
+2025-11-13 22:00:17,054 ERROR scheduler Exception in Enqueue Events for Site helpdesk.test
+Traceback (most recent call last):
+  File "/Users/shobhit.aggarwal/Desktop/projects/frappe/frappe_bench/apps/frappe/frappe/utils/scheduler.py", line 99, in enqueue_events_for_site
+    if is_scheduler_inactive():
+       ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shobhit.aggarwal/Desktop/projects/frappe/frappe_bench/apps/frappe/frappe/utils/scheduler.py", line 143, in is_scheduler_inactive
+    if is_scheduler_disabled(verbose=verbose):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shobhit.aggarwal/Desktop/projects/frappe/frappe_bench/apps/frappe/frappe/utils/scheduler.py", line 156, in is_scheduler_disabled
+    frappe.db.get_single_value("System Settings", "enable_scheduler")
+  File "/Users/shobhit.aggarwal/Desktop/projects/frappe/frappe_bench/apps/frappe/frappe/database/database.py", line 839, in get_single_value
+    df = frappe.get_meta(doctype).get_field(fieldname)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shobhit.aggarwal/Desktop/projects/frappe/frappe_bench/apps/frappe/frappe/__init__.py", line 1338, in get_meta
+    return frappe.model.meta.get_meta(doctype, cached=cached)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shobhit.aggarwal/Desktop/projects/frappe/frappe_bench/apps/frappe/frappe/model/meta.py", line 71, in get_meta
+    meta = Meta(doctype)
+           ^^^^^^^^^^^^^
+  File "/Users/shobhit.aggarwal/Desktop/projects/frappe/frappe_bench/apps/frappe/frappe/model/meta.py", line 127, in __init__
+    self.process()
+  File "/Users/shobhit.aggarwal/Desktop/projects/frappe/frappe_bench/apps/frappe/frappe/model/meta.py", line 150, in process
+    self.set_custom_permissions()
+  File "/Users/shobhit.aggarwal/Desktop/projects/frappe/frappe_bench/apps/frappe/frappe/model/meta.py", line 547, in set_custom_permissions
+    custom_perms = frappe.get_all(
+                   ^^^^^^^^^^^^^^^
+  File "/Users/shobhit.aggarwal/Desktop/projects/frappe/frappe_bench/apps/frappe/frappe/__init__.py", line 2047, in get_all
+    return get_list(doctype, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shobhit.aggarwal/Desktop/projects/frappe/frappe_bench/apps/frappe/frappe/__init__.py", line 2022, in get_list
+    return frappe.model.db_query.DatabaseQuery(doctype).execute(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shobhit.aggarwal/Desktop/projects/frappe/frappe_bench/apps/frappe/frappe/model/db_query.py", line 206, in execute
+    self.columns = self.get_table_columns()
+                   ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shobhit.aggarwal/Desktop/projects/frappe/frappe_bench/apps/frappe/frappe/model/db_query.py", line 600, in get_table_columns
+    return get_table_columns(self.doctype)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shobhit.aggarwal/Desktop/projects/frappe/frappe_bench/apps/frappe/frappe/model/meta.py", line 81, in get_table_columns
+    return frappe.db.get_table_columns(doctype)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shobhit.aggarwal/Desktop/projects/frappe/frappe_bench/apps/frappe/frappe/database/database.py", line 1329, in get_table_columns
+    raise self.TableMissingError("DocType", doctype)
+pymysql.err.ProgrammingError: ('DocType', 'Custom DocPerm')

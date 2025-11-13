@@ -1,0 +1,12 @@
+[submodule "apps/bench_manager"]
+	path = apps/bench_manager
+	url = https://github.com/frappe/bench_manager.git
+[submodule "apps/frappe"]
+	path = apps/frappe
+	url = git@bitbucket.org:pharmaeasyteam/frappe.git
+[submodule "apps/helpdesk"]
+	path = apps/helpdesk
+	url = git@bitbucket.org:pharmaeasyteam/helpdesk.git
+[submodule "apps/telephony"]
+	path = apps/telephony
+	url = https://github.com/frappe/telephony.git
