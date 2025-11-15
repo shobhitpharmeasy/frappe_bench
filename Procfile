@@ -1,6 +1,6 @@
 
 
-web: bench serve  --port 8000
+# web: bench serve  --port 8000
 
 
 socketio: /Users/shobhit.aggarwal/.local/share/mise/installs/node/18.20.8/bin/node apps/frappe/socketio.js
