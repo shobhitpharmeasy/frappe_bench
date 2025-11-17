@@ -27,15 +27,5 @@
         "required": [],
         "idx": 3,
         "version": "0.0.1"
-    },
-    "bench_manager": {
-        "is_repo": true,
-        "resolution": {
-            "commit_hash": "cc4a1fd589af9d3f44d437ef16e6926b1be31280",
-            "branch": "develop"
-        },
-        "required": [],
-        "idx": 4,
-        "version": "0.0.1"
     }
 }

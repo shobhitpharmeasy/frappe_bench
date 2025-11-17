@@ -1,5 +1,7 @@
 {
  "background_workers": 1,
+ "db_host": "localhost",
+ "db_port": "3306",
  "default_site": "helpdesk.test",
  "file_watcher_port": 6787,
  "frappe_user": "shobhit.aggarwal",
